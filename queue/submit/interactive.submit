@@ -1,0 +1,23 @@
+# figuring out next postprocessing steps in an interactive job.
+universe = vanilla
+
+output = outdir/interactive.$(cluster).$(process).out
+error = queue/error/interactive.$(cluster).$(process).err
+log = queue/log/interactive.$(cluster).log
+
+## Choose a build or execute node
++IsMatlabBuildJob = true
+requirements = OpSysMajorVer == 7 && IsMatlabBuildSlot
+#requirements = (OpSysMajorVer == 6 || OpSysMajorVer == 7) && (Target.HasGluster == true)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+request_cpus = 1
+request_memory = 1GB
+request_disk  = 1GB
+
+transfer_input_files= bin/cutadapt
+notification = never
+
+queue
