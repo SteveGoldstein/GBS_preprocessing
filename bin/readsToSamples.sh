@@ -27,8 +27,7 @@ sampleFQ=$1
 shift
 
 resultDir=$1
-
-mkdir -p results/processedReads
+mkdir results
 
 cp $sampleFQ .
 sampleFQ=$(basename $sampleFQ)
@@ -55,6 +54,7 @@ do
     INPUT=$OUTDIR/barcode$i.discards.fq
     gzip $OUTDIR/sample*.fq
 done
+gzip $INPUT
 
 tar zcf $resultsTarFile results/
 mv $resultsTarFile $resultDir
