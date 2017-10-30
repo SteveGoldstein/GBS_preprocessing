@@ -13,7 +13,7 @@ SAMPLEDIR = $(BASEDIR)/samples
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/readsToSamples.sh
 
-args = $(DATADIR)/$(SAMPLE) $(SAMPLEDIR) 
+args = $(CLUSTER) $(PROCESS) $(DATADIR)/$(SAMPLE) $(SAMPLEDIR) 
 
 transfer_input_files = http://proxy.chtc.wisc.edu/SQUID/sgoldstein/python277.withCutadapt.tar.gz, bin/cutadapt, bin/process_radtags, /home/sgoldstein/git/Stacks/apeKI_barcode4.txt, /home/sgoldstein/git/Stacks/apeKI_barcode7.txt, /home/sgoldstein/git/Stacks/apeKI_barcode5.txt, /home/sgoldstein/git/Stacks/apeKI_barcode8.txt, /home/sgoldstein/git/Stacks/apeKI_barcode6.txt
 
@@ -22,7 +22,8 @@ notification = never
 
 request_cpus = 1
 request_memory = 1 GB
-request_disk = 50 GB
+#request_disk = 50 GB
+request_disk = 5 GB
 
 queue SAMPLE in (
       run505.RHCA-ALPE_NoIndex_L003_R1.100kReads.fastq.gz
