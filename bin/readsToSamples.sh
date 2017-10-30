@@ -32,7 +32,7 @@ mkdir -p results/processedReads
 
 cp $sampleFQ .
 sampleFQ=$(basename $sampleFQ)
-resultsTarFile=${sampleFQ/.$cluster.$process.fastq.gz/.tgz}
+resultsTarFile=${sampleFQ/\.fastq.gz/.$cluster.$process.tgz}
 
 gunzip -c $sampleFQ > reads.fastq
 rm $sampleFQ

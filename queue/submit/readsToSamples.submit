@@ -1,19 +1,20 @@
 universe = vanilla
 
-output = outdir/readsToSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).out
-error =  queue/error/readsToSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).err
-log = queue/log/readsToSamples.$(CLUSTER).log
-
 #BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/
 BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/test
 DATADIR = $(BASEDIR)/raw_data
 SAMPLEDIR = $(BASEDIR)/samples
+tmp=$Fn(SAMPLEFILE)
+SAMPLE=$Fn(tmp)
 
+output = outdir/readsToSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).out
+error =  queue/error/readsToSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).err
+log = queue/log/readsToSamples.$(CLUSTER).log
 
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/readsToSamples.sh
 
-args = $(CLUSTER) $(PROCESS) $(DATADIR)/$(SAMPLE) $(SAMPLEDIR) 
+args = $(CLUSTER) $(PROCESS) $(DATADIR)/$(SAMPLEFILE) $(SAMPLEDIR) 
 
 transfer_input_files = http://proxy.chtc.wisc.edu/SQUID/sgoldstein/python277.withCutadapt.tar.gz, bin/cutadapt, bin/process_radtags, /home/sgoldstein/git/Stacks/apeKI_barcode4.txt, /home/sgoldstein/git/Stacks/apeKI_barcode7.txt, /home/sgoldstein/git/Stacks/apeKI_barcode5.txt, /home/sgoldstein/git/Stacks/apeKI_barcode8.txt, /home/sgoldstein/git/Stacks/apeKI_barcode6.txt
 
@@ -25,6 +26,6 @@ request_memory = 1 GB
 #request_disk = 50 GB
 request_disk = 5 GB
 
-queue SAMPLE in (
+queue SAMPLEFILE in (
       run505.RHCA-ALPE_NoIndex_L003_R1.100kReads.fastq.gz
 )
