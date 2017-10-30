@@ -1,7 +1,7 @@
 universe = vanilla
 
-#BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/
-BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/test
+BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/
+#BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/test
 DATADIR = $(BASEDIR)/raw_data
 SAMPLEDIR = $(BASEDIR)/samples
 tmp=$Fn(SAMPLEFILE)
@@ -23,9 +23,17 @@ notification = never
 
 request_cpus = 1
 request_memory = 1 GB
-#request_disk = 50 GB
-request_disk = 5 GB
+request_disk = 60 GB
+#request_disk = 5 GB
 
 queue SAMPLEFILE in (
-      run505.RHCA-ALPE_NoIndex_L003_R1.100kReads.fastq.gz
+      run313.Givnish-ApeKI-test_NoIndex_L006_R1.fastq.gz
+      run313.Givnish-ApeKI-test_NoIndex_L006_R2.fastq.gz
+      run460.RCHA-ALPE_NoIndex_L004_R1.fastq.gz
+      run505.RHCA-ALPE_NoIndex_L003_R1.fastq.gz
+      run621.S13JUN14-A_NoIndex_L005_R1.fastq.gz
+      run621.S14JUN14-B_NoIndex_L006_R1.fastq.gz
+      run621.S15JUN14-C_NoIndex_L007_R1.fastq.gz
+      run621.S3June14-X_NoIndex_L002_R1.fastq.gz
+      run621.S9June14-A_NoIndex_L003_R1.fastq.gz
 )
