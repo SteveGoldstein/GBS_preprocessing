@@ -50,11 +50,11 @@ do
     process_radtags -f $INPUT -o $OUTDIR -b apeKI_barcode$i.txt  -c -q -e apeKI -D >&  $OUTDIR/process_radtags.err
 
     mv $OUTDIR/$(basename $INPUT).discards $OUTDIR/barcode$i.discards.fq
-    gzip $INPUT
+    rm $INPUT
     INPUT=$OUTDIR/barcode$i.discards.fq
     gzip $OUTDIR/sample*.fq
 done
-gzip $INPUT
+rm $INPUT
 
 tar zcf $resultsTarFile results/
 mv $resultsTarFile $resultDir
