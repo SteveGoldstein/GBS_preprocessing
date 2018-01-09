@@ -6,6 +6,7 @@ DATADIR = $(BASEDIR)/raw_data
 SAMPLEDIR = $(BASEDIR)/samples
 tmp=$Fn(SAMPLEFILE)
 SAMPLE=$Fn(tmp)
+RENAMESCRIPT=bin/renameScripts/$(SAMPLE).rename.sh
 
 output = outdir/readsToSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).out
 error =  queue/error/readsToSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).err
@@ -16,7 +17,7 @@ executable = bin/readsToSamples.sh
 
 args = $(CLUSTER) $(PROCESS) $(DATADIR)/$(SAMPLEFILE) $(SAMPLEDIR) 
 
-transfer_input_files = http://proxy.chtc.wisc.edu/SQUID/sgoldstein/python277.withCutadapt.tar.gz, bin/cutadapt, bin/process_radtags, /home/sgoldstein/git/Stacks/apeKI_barcode4.txt, /home/sgoldstein/git/Stacks/apeKI_barcode7.txt, /home/sgoldstein/git/Stacks/apeKI_barcode5.txt, /home/sgoldstein/git/Stacks/apeKI_barcode8.txt, /home/sgoldstein/git/Stacks/apeKI_barcode6.txt
+transfer_input_files = http://proxy.chtc.wisc.edu/SQUID/sgoldstein/python277.withCutadapt.tar.gz, bin/cutadapt, bin/process_radtags, /home/sgoldstein/git/Stacks/apeKI_barcode4.txt, /home/sgoldstein/git/Stacks/apeKI_barcode7.txt, /home/sgoldstein/git/Stacks/apeKI_barcode5.txt, /home/sgoldstein/git/Stacks/apeKI_barcode8.txt, /home/sgoldstein/git/Stacks/apeKI_barcode6.txt, $(RENAMESCRIPT)
 
 transfer_output_files = 
 notification = never

@@ -31,6 +31,7 @@ mkdir results
 
 cp $sampleFQ .
 sampleFQ=$(basename $sampleFQ)
+renameScript=${sampleFQ/\.fastq.gz/.rename.sh}
 resultsTarFile=${sampleFQ/\.fastq.gz/.$cluster.$process.tgz}
 
 gunzip -c $sampleFQ > reads.fastq
@@ -40,9 +41,13 @@ nohup ./cutadapt -a GCWGAGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCT
 
 rm reads.fastq
 
-INPUT=results/cutadaptOut.fastq
-for i in 8 7 6 5 4;
+BASEDIR=$(pwd)
+INPUT=$BASEDIR/results/cutadaptOut.fastq
+SAMPLEDIR=$BASEDIR/results/samples
+mkdir $SAMPLEDIR
 
+for i in 8 7 6 5 4;
+	 
 do
     echo "doing barcodes$i"
     OUTDIR=$(pwd)/results/barcode$i
@@ -53,8 +58,13 @@ do
     rm $INPUT
     INPUT=$OUTDIR/barcode$i.discards.fq
     gzip $OUTDIR/sample*.fq
+    mv $OUTDIR/sample*.fq.gz $SAMPLEDIR
 done
 rm $INPUT
+
+cd $SAMPLEDIR
+$BASEDIR/$renameScript
+cd $BASEDIR
 
 tar zcf $resultsTarFile results/
 mv $resultsTarFile $resultDir
