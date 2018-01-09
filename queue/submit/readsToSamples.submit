@@ -23,7 +23,7 @@ notification = never
 
 request_cpus = 1
 request_memory = 1 GB
-request_disk = 30 GB
+request_disk = 70 GB
 #request_disk = 5 GB
 
 queue SAMPLEFILE in (
