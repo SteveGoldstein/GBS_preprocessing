@@ -33,6 +33,7 @@ cp $sampleFQ .
 sampleFQ=$(basename $sampleFQ)
 renameScript=${sampleFQ/\.fastq.gz/.rename.sh}
 resultsTarFile=${sampleFQ/\.fastq.gz/.$cluster.$process.tgz}
+samplesTarFile=${sampleFQ/\.fastq.gz/.samples.$cluster.$process.tgz}
 
 gunzip -c $sampleFQ > reads.fastq
 rm $sampleFQ
@@ -64,9 +65,12 @@ rm $INPUT
 
 cd $SAMPLEDIR
 $BASEDIR/$renameScript
+cd ..
+tar zcf $samplesTarFile samples/
+mv $samplesTarFile $resultsDir
 cd $BASEDIR
 
-tar zcf $resultsTarFile results/
-mv $resultsTarFile $resultDir
+#tar zcf $resultsTarFile results/
+#mv $resultsTarFile $resultDir
 
 
