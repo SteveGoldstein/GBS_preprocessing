@@ -16,12 +16,12 @@ use File::Basename;
 
 ##############################################
 #### Set up for CHTC
-## if this is CHTC, cp the file from gluster and use the local bwa and samtools
+## if this is CHTC, cp the file from gluster and use the local bwa and samtools and add /bin to $PATH
 my $isCHTC = 0;
 my $host = `hostname -A`;
 if ($host =~ /chtc\.wisc.edu/) {
     $isCHTC = 1;
-    $ENV{PATH} .= ':./';
+    $ENV{PATH} .= ':/bin:./';
 }
 ##############################################
 
