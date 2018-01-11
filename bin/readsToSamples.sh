@@ -67,7 +67,7 @@ cd $SAMPLEDIR
 $BASEDIR/$renameScript
 cd ..
 tar zcf $samplesTarFile samples/
-mv $samplesTarFile $resultsDir
+mv $samplesTarFile $resultDir
 cd $BASEDIR
 
 #tar zcf $resultsTarFile results/
