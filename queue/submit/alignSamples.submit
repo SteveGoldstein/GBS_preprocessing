@@ -1,0 +1,24 @@
+universe = vanilla
+
++AccountingGroup = Botany_Givnish
+
+output = outdir/alignSamples.$(CLUSTER).$(PROCESS).out
+error =  queue/error/alignSamples.$(CLUSTER).$(PROCESS).err
+log = queue/log/alignSamples.$(CLUSTER).log
+
+requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
+executable = bin/countAlignments.pl
+
+args = -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.104553234.*
+
+#/mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/run313.Givnish-ApeKI-test_NoIndex_L006_R2.samples.104669372.1.tgz /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/test/samples/run505.RHCA-ALPE_NoIndex_L003_R1.100kReads.104551527.0.tgz
+
+transfer_input_files = ApeKI, bin/bwa, bin/samtools
+notification = never
+
+request_cpus = 1
+request_memory = 1 GB
+request_disk = 60 GB
+#request_disk = 5 GB
+
+queue 

@@ -37,7 +37,10 @@ GetOptions (
 ## allow for comma-separated or redundant list
 @tarFile = split(/,/, join(",", @tarFile));
 ## add any addition args on the cmd line to the tar file list;
-push @tarFile, @ARGV;
+foreach my $arg (@ARGV) {
+    ## expand wildcards for each argument
+    push @tarFile, glob $arg;
+}
 
 my %alignments;
 foreach my $tarFile (@tarFile) {
