@@ -1,3 +1,7 @@
+## temporary list of inputs while run460 readsToSamples completes
+##  watch out:  these wild card expansions might pull in additional files
+##  when some of the currently running jobs complete
+
 universe = vanilla
 
 +AccountingGroup = Botany_Givnish
@@ -9,16 +13,13 @@ log = queue/log/alignSamples.$(CLUSTER).log
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/countAlignments.pl
 
-args = -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.104553234.*
-
-#/mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/run313.Givnish-ApeKI-test_NoIndex_L006_R2.samples.104669372.1.tgz /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/test/samples/run505.RHCA-ALPE_NoIndex_L003_R1.100kReads.104551527.0.tgz
+args = -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.samples.*.tgz /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/results/run460*.tgz
 
 transfer_input_files = ApeKI, bin/bwa, bin/samtools
 notification = never
 
-request_cpus = 1
+request_cpus = 4
 request_memory = 1 GB
-request_disk = 60 GB
-#request_disk = 5 GB
+request_disk = 20 GB
 
-queue 
+queue 5
