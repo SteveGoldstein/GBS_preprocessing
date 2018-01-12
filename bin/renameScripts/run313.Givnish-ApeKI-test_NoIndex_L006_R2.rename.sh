@@ -18,7 +18,7 @@ mv sample_GTGAGGGT.fq.gz coco_woodduckLk_63484_run313.R2.fq.gz
 mv sample_CGTGTGGT.fq.gz veof_cedFKaub_63531_run313.R2.fq.gz
 mv sample_TGCAAGGA.fq.gz rupa_toftPtNA_200325_run313.R2.fq.gz
 mv sample_GGATTGGT.fq.gz oras_SandyBchLk_63199_run313.R2.fq.gz
-mv sample_CGCCTTAT.fq.gz Corybas.diemenicus_SLE404_run313.fq.gz
+mv sample_CGCCTTAT.fq.gz Corybas.diemenicus_SLE404_run313.R2.fq.gz
 mv sample_ATTGGAT.fq.gz veof_3051_61836_run313.R2.fq.gz
 mv sample_ACGTGTT.fq.gz arnu_3150_62103_run313.R2.fq.gz
 mv sample_TGCTGGA.fq.gz arnu_3150_62179_run313.R2.fq.gz
@@ -37,10 +37,10 @@ mv sample_GGACCTA.fq.gz arnu_BearRdAnd47_63413_run313.R2.fq.gz
 mv sample_TAGCGGA.fq.gz coco_OldCand155_63440_run313.R2.fq.gz
 mv sample_ATTAATT.fq.gz rupa_toftPtNA_200329_run313.R2.fq.gz
 mv sample_TCGAAGA.fq.gz rupa_toftPtNA_200330_run313.R2.fq.gz
-mv sample_CTTGCTT.fq.gz BLANK_run313.fq.gz
-mv sample_CGGTAGA.fq.gz Corybas.despectans_SLE459_run313.fq.gz
-mv sample_ATGAAAC.fq.gz Corybas.fimbriatus_SLE250_run313.fq.gz
-mv sample_AACGCCT.fq.gz Corybas.recurvus_SLE374_run313.fq.gz
+mv sample_CTTGCTT.fq.gz BLANK_run313.R2.fq.gz
+mv sample_CGGTAGA.fq.gz Corybas.despectans_SLE459_run313.R2.fq.gz
+mv sample_ATGAAAC.fq.gz Corybas.fimbriatus_SLE250_run313.R2.fq.gz
+mv sample_AACGCCT.fq.gz Corybas.recurvus_SLE374_run313.R2.fq.gz
 mv sample_TAACGA.fq.gz arnu_3150_62142_run313.R2.fq.gz
 mv sample_GAGATA.fq.gz mara_3063_62370_run313.R2.fq.gz
 mv sample_CATCGT.fq.gz maca_3056_62451_run313.R2.fq.gz
@@ -61,8 +61,8 @@ mv sample_GCTCTA.fq.gz rupa_toftPtNA_200322_run313.R2.fq.gz
 mv sample_TGGCTA.fq.gz rupa_toftPtNA_200328_run313.R2.fq.gz
 mv sample_CGCGGT.fq.gz frvi_3059_62912_run313.R2.fq.gz
 mv sample_AGTGGA.fq.gz frvi_3059_62926_run313.R2.fq.gz
-mv sample_ATGCCT.fq.gz Corybas.dilatatus_SLE493_run313.fq.gz
-mv sample_CCACAA.fq.gz Corybas.expansus_SLE473_run313.fq.gz
+mv sample_ATGCCT.fq.gz Corybas.dilatatus_SLE493_run313.R2.fq.gz
+mv sample_CCACAA.fq.gz Corybas.expansus_SLE473_run313.R2.fq.gz
 mv sample_CATCT.fq.gz trbo_3150_62071_run313.R2.fq.gz
 mv sample_ACAAA.fq.gz trbo_3150_62110_run313.R2.fq.gz
 mv sample_CTGTA.fq.gz maca_3150_62176_run313.R2.fq.gz
@@ -82,9 +82,9 @@ mv sample_TAATA.fq.gz mara_3063_62364_run313.R2_1.fq.gz
 mv sample_CGCTT.fq.gz frvi_3059_62879_run313.R2.fq.gz
 mv sample_GCTTA.fq.gz frvi_3059_62880_run313.R2.fq.gz
 mv sample_TACAT.fq.gz frvi_3059_62893_run313.R2.fq.gz
-mv sample_TGCGA.fq.gz Corybas.hispidus_SLE220_run313.fq.gz
-mv sample_ATTGA.fq.gz Corybas.incurvus_SLE415_run313.fq.gz
-mv sample_CTAGC.fq.gz Corybas.pruinosus_SLE239_run313.fq.gz
+mv sample_TGCGA.fq.gz Corybas.hispidus_SLE220_run313.R2.fq.gz
+mv sample_ATTGA.fq.gz Corybas.incurvus_SLE415_run313.R2.fq.gz
+mv sample_CTAGC.fq.gz Corybas.pruinosus_SLE239_run313.R2.fq.gz
 mv sample_TGCA.fq.gz maca_3117_62228_run313.R2.fq.gz
 mv sample_ACTA.fq.gz coco_3117_62266_run313.R2.fq.gz
 mv sample_GTAA.fq.gz maca_3056_62457_run313.R2.fq.gz
@@ -94,5 +94,5 @@ mv sample_AGGC.fq.gz asma_holmboe1_63274_run313.R2.fq.gz
 mv sample_AACT.fq.gz rupa_toftPtNA_200320_run313.R2.fq.gz
 mv sample_GCGT.fq.gz oras_SandyBchLk_63199_run313.R2_1.fq.gz
 mv sample_TCAC.fq.gz frvi_3059_62899_run313.R2.fq.gz
-mv sample_CGAT.fq.gz Corybas.dentatus_SLE488_run313.fq.gz
-mv sample_GATC.fq.gz Corybas.limpidus_SLE390_run313.fq.gz
+mv sample_CGAT.fq.gz Corybas.dentatus_SLE488_run313.R2.fq.gz
+mv sample_GATC.fq.gz Corybas.limpidus_SLE390_run313.R2.fq.gz
