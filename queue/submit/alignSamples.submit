@@ -1,7 +1,3 @@
-## temporary list of inputs while run460 readsToSamples completes
-##  watch out:  these wild card expansions might pull in additional files
-##  when some of the currently running jobs complete
-
 universe = vanilla
 
 +AccountingGroup = Botany_Givnish
@@ -13,12 +9,13 @@ log = queue/log/alignSamples.$(CLUSTER).log
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/countAlignments.pl
 
-args = -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.samples.*.tgz /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/results/run460*.tgz
+args = -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.samples.*.tgz
 
 transfer_input_files = ApeKI, bin/bwa, bin/samtools
 notification = never
 
-request_cpus = 4
+### most of the time is spent hitting disk so multiple cpus don't help much. 
+request_cpus = 2
 request_memory = 1 GB
 request_disk = 20 GB
 
