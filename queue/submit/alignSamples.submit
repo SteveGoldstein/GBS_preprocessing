@@ -9,14 +9,14 @@ log = queue/log/alignSamples.$(CLUSTER).log
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/countAlignments.pl
 
-args = -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.samples.*.tgz
+NUMCPUS = 4
+args = -cpus $(NUMCPUS) -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.samples.*.tgz
 
 transfer_input_files = ApeKI, bin/bwa, bin/samtools
 notification = never
 
-### most of the time is spent hitting disk so multiple cpus don't help much. 
-request_cpus = 2
+request_cpus = $(NUMCPUS)
 request_memory = 1 GB
 request_disk = 20 GB
 
-queue 5
+queue 2

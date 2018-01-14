@@ -27,10 +27,12 @@ if ($host =~ /chtc\.wisc.edu/) {
 
 my @tarFile;
 my $referenceFastA = '/home/sgoldstein/Projects/IdentifyGBSSamples/rbcl/ApeKI/rbcl.fasta';
+my $cpus = 1;
 
 GetOptions (
     'tarFile=s'         => \@tarFile,
     'referenceFastA=s'  => \$referenceFastA,
+    'cpus=i'            => \$cpus,
           );
 
 
@@ -116,10 +118,11 @@ sub alignAndParse {
     my $file = shift;
 
     my $bwaSamtoolsPipe = join(' | ', 
-			       "bwa mem $referenceFastA -",
+			       "bwa mem -t $cpus $referenceFastA -",
 			       "samtools view -h -bT $referenceFastA -F 4 -o -",
 			       'samtools view',
 	);
+
 
     open ALIGN, "zcat -f $file | $bwaSamtoolsPipe |";
     my %counts;
