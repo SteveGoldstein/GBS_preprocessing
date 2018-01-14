@@ -9,6 +9,7 @@ log = queue/log/alignSamples.$(CLUSTER).log
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/countAlignments.pl
 
+### 4 cpus gives about a 2x speed-up;  much time is spend on hitting disk, so that's why it's inefficient.
 NUMCPUS = 4
 args = -cpus $(NUMCPUS) -reference ApeKI/rbcl.fasta /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/samples/*.samples.*.tgz
 
