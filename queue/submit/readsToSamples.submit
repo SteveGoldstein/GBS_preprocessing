@@ -1,6 +1,8 @@
+### Demultiplex (and trim adapters) a lane of sequence and rename the samples according to names
+##  parsed from the "HTC keys" spreadsheets;
 universe = vanilla
 
-BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/
+BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples
 #BASEDIR = /mnt/gluster/sgoldstein/Projects/IdentifyGBSSamples/test
 DATADIR = $(BASEDIR)/raw_data
 SAMPLEDIR = $(BASEDIR)/samples
@@ -15,7 +17,7 @@ log = queue/log/readsToSamples.$(CLUSTER).log
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
 executable = bin/readsToSamples.sh
 
-args = $(CLUSTER) $(PROCESS) $(DATADIR)/$(SAMPLEFILE) $(SAMPLEDIR) 
+args = $(CLUSTER) $(PROCESS) $(SAMPLEFILE) $(SAMPLEDIR) 
 
 transfer_input_files = http://proxy.chtc.wisc.edu/SQUID/sgoldstein/python277.withCutadapt.tar.gz, bin/cutadapt, bin/process_radtags, /home/sgoldstein/git/Stacks/apeKI_barcode4.txt, /home/sgoldstein/git/Stacks/apeKI_barcode7.txt, /home/sgoldstein/git/Stacks/apeKI_barcode5.txt, /home/sgoldstein/git/Stacks/apeKI_barcode8.txt, /home/sgoldstein/git/Stacks/apeKI_barcode6.txt, $(RENAMESCRIPT)
 
@@ -27,14 +29,4 @@ request_memory = 1 GB
 request_disk = 70 GB
 #request_disk = 5 GB
 
-queue SAMPLEFILE in (
-      run313.Givnish-ApeKI-test_NoIndex_L006_R1.fastq.gz
-      run313.Givnish-ApeKI-test_NoIndex_L006_R2.fastq.gz
-      run460.RCHA-ALPE_NoIndex_L004_R1.fastq.gz
-      run505.RHCA-ALPE_NoIndex_L003_R1.fastq.gz
-      run621.S13JUN14-A_NoIndex_L005_R1.fastq.gz
-      run621.S14JUN14-B_NoIndex_L006_R1.fastq.gz
-      run621.S15JUN14-C_NoIndex_L007_R1.fastq.gz
-      run621.S3June14-X_NoIndex_L002_R1.fastq.gz
-      run621.S9June14-A_NoIndex_L003_R1.fastq.gz
-)
+queue SAMPLEFILE matching files $(DATADIR)/*fastq.gz
