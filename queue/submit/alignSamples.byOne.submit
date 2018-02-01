@@ -3,8 +3,16 @@ universe = vanilla
 
 +AccountingGroup = Botany_Givnish
 
-output = outdir/alignSamples.$(CLUSTER).$(PROCESS).out
-error =  queue/error/alignSamples.$(CLUSTER).$(PROCESS).err
+
+## strip off sample.clusterid.procid.tgz from the input file name to create the output file name
+## (is there a better way to do this?)
+tmp1=$Fn(SAMPLEFILE)
+tmp2=$Fn(tmp1)
+tmp3=$Fn(tmp2)
+SAMPLE=$Fn(tmp3)
+
+output = outdir/alignSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).out
+error =  queue/error/alignSamples.$(SAMPLE).$(CLUSTER).$(PROCESS).err
 log = queue/log/alignSamples.$(CLUSTER).log
 
 requirements = (OpSysMajorVer == 7) && (Target.HasGluster == true)
