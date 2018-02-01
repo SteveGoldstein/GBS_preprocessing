@@ -95,4 +95,4 @@ mv sample_GCGT.fq.gz rimi_1055_201021_S15Jun14C.fq.gz
 mv sample_GTAA.fq.gz rimi_1055_201027_S15Jun14C.fq.gz
 mv sample_CTTGCTT.fq.gz rimi_LkKegonsa_201858_S15Jun14C.fq.gz
 mv sample_AGTGGA.fq.gz rimi_MadSchFor_687355_S15Jun14C.fq.gz
-mv sample_TTCCTGGA.fq.gz water_runS15Jun14C.fq.gz
+mv sample_TTCCTGGA.fq.gz water_S15Jun14C.fq.gz

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv sample_TTCCTGGA.fq.gz blank_run621_S14Jun14B.fq.gz
+mv sample_TTCCTGGA.fq.gz water_run621_S14Jun14B.fq.gz
 mv sample_GCGGAAT.fq.gz coco_FrogLk14_299277_run621_S14Jun14B.fq.gz
 mv sample_GGATTGGT.fq.gz coco_FrogLk14_299279_run621_S14Jun14B.fq.gz
 mv sample_TCACC.fq.gz coco_FrogLk14_299281_run621_S14Jun14B.fq.gz
