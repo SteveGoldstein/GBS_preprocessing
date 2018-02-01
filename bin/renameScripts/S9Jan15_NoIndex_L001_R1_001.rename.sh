@@ -95,4 +95,4 @@ mv sample_ATATGT.fq.gz veof_3051_61803_S9JAN15.fq.gz
 mv sample_ATTAATT.fq.gz veof_BirdLkRd_63358_S9JAN15.fq.gz
 mv sample_CTCC.fq.gz veof_holmboetwo_63299_S9JAN15.fq.gz
 mv sample_ACAGGGAA.fq.gz veof_holmboetwo_63326_S9JAN15.fq.gz
-mv sample_12.fq.gz blank_S9JAN15.fq.gz
+mv sample_TTCCTGGA.fq.gz BADwater_S9JAN15.fq.gz

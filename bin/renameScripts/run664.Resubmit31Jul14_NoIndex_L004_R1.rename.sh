@@ -75,7 +75,8 @@ mv sample_CTTCCA.fq.gz veof_3051_61818_run664_resub31Jul.fq.gz
 mv sample_ACCTAA.fq.gz veof_3051_61819_run664_resub31Jul.fq.gz
 mv sample_ACGTGTT.fq.gz veof_3051_61821_run664_resub31Jul.fq.gz
 mv sample_AACCGAGA.fq.gz veof_3053_61960_run664_resub31Jul.fq.gz
-mv sample_ACGACTAC+GAGATA.fq.gz veof_3063_62373_run664_resub31Jul.fq.gz
+mv sample_GAGATA.fq.gz veof_3063_62373_run664_resub31Jul_1.fq.gz
+mv sample_ACGACTAC.fq.gz veof_3063_62373_run664_resub31Jul.fq.gz
 mv sample_TCGTT.fq.gz veof_3063_62382_run664_resub31Jul.fq.gz
 mv sample_ACTA.fq.gz veof_3056_62482_run664_resub31Jul.fq.gz
 mv sample_ATTAATT.fq.gz veof_3056_62538_run664_resub31Jul.fq.gz
@@ -94,4 +95,4 @@ mv sample_ACAGGGAA.fq.gz veof_Holmboetwo_63325_run664_resub31Jul.fq.gz
 mv sample_ATATGT.fq.gz veof_Holmboetwo_63349_run664_resub31Jul.fq.gz
 mv sample_AGCCC.fq.gz veof_BirdLkRd_63377_run664_resub31Jul.fq.gz
 mv sample_AACGCCT.fq.gz veof_BirdLkRd_63390_run664_resub31Jul.fq.gz
-mv sample_TTCCTGGA.fq.gz water_water_run664_resub31Jul.fq.gz
+mv sample_TTCCTGGA.fq.gz water_run664_resub31Jul.fq.gz

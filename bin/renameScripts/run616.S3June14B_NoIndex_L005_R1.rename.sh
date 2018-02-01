@@ -95,4 +95,4 @@ mv sample_AGGAT.fq.gz rimi_1151_1559_200650_run616_S3June14B.fq.gz
 mv sample_CTACGGA.fq.gz rimi_LkKegonsa_201867_run616_S3June14B.fq.gz
 mv sample_ATTGGAT.fq.gz rimi_LkKegonsa_201983_run616_S3June14B.fq.gz
 mv sample_ATTAATT.fq.gz rimi_1084_200840_run616_S3June14B.fq.gz
-mv sample_12.fq.gz water_run616_S3June14B.fq.gz
+mv sample_TTCCTGGA.fq.gz water_run616_S3June14B.fq.gz

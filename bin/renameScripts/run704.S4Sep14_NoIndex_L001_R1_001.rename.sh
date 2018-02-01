@@ -53,7 +53,8 @@ mv sample_GCGGAAT.fq.gz rhca_Magnolia_201461_run704_S4Sept14.fq.gz
 mv sample_GGATTGGT.fq.gz rhca_Magnolia_201485_run704_S4Sept14.fq.gz
 mv sample_TAGGAA.fq.gz rhca_MadSchFor_201770_run704_S4Sept14.fq.gz
 mv sample_GAACTTC.fq.gz rhca_MadSchFor_201773_run704_S4Sept14.fq.gz
-mv sample_TCTCAGTC+TGCTGGA.fq.gz rhca_MadSchFor_201774_run704_S4Sept14.fq.gz
+mv sample_TGCTGGA.fq.gz rhca_MadSchFor_201774_run704_S4Sept14_1.fq.gz
+mv sample_TCTCAGTC.fq.gz rhca_MadSchFor_201774_run704_S4Sept14.fq.gz
 mv sample_TGCA.fq.gz rhca_MadSchFor_201775_run704_S4Sept14.fq.gz
 mv sample_AGCCC.fq.gz rhca_MadSchFor_201776_run704_S4Sept14.fq.gz
 mv sample_CTTCCA.fq.gz rhca_MadSchFor_201779_run704_S4Sept14.fq.gz
