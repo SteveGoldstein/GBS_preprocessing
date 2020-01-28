@@ -1,0 +1,9 @@
+1.  /squid/sgoldstein/python277.tar.gz has the cutadapt package installed within
+it. (Using pip and a fresh python277 tarball). This was built on pink.botany.wisc.edu but I found the python tarball on /squid/.
+
+2.  bin/process_radtags had some GLIBC_2.14 errors on submit3.  Next: try to run it on an interactive job.
+    result:   didn't work on sl6;  next: try centos 7  (cat /etc/*release)
+
+3.
+
+
