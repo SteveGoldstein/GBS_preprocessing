@@ -1,4 +1,8 @@
-DataCleaning/03-sampleFastQFiles
+# GBS_preprocessing
+Running cutadapt and process_radtags via HTCondor on the UW Madison Center for High Throughput Computing (CHTC) pool.
+
+Original version created for the DoB/DataCleaning Project;  
+Goal:  Refactor to make it more widely applicable.
 
 June 18, 2018
 Steve Goldstein
@@ -20,20 +24,3 @@ renamed sample files are bundled into a single tar file.
 
 This processing was done on the CHTC pool, using the gluster file
 system for staging of the large input and output files.
-=============================================================
-
-filepaths on submit-3.chtc.wisc.edu:
-
-  This dir structure was originally in a local git repo at
-	  
-  	  /home/sgoldstein/Projects/IdentifyGBSSamples/rbcl
-
-  For this cleaned up version, the repo was cloned to
-
-	  /home/sgoldstein/Projects/IdentifyGBSSamples/DataCleaning/03-sampleFastQFiles
-
-
-
-
-	
-	
